@@ -1,4 +1,4 @@
-package demensoinArray;
+package DemensionArray;
 
 import java.util.Scanner;
 

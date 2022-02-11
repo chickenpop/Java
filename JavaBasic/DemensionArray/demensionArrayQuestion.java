@@ -1,4 +1,4 @@
-package demensoinArray;
+package DemensionArray;
 
 import java.util.Scanner;
 
@@ -7,15 +7,15 @@ public class demensionArrayQuestion {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		// ÇàÀÇ Å©±â ÀÔ·Â
-		System.out.print("ÇàÀÇ Å©±â ÀÔ·Â : ");
+		// í–‰ì˜ í¬ê¸° ì…ë ¥
+		System.out.print("í–‰ì˜ í¬ê¸° ì…ë ¥ : ");
 		char ch[][] = new char[sc.nextInt()][];
-		// ¿­ÀÇ Å©±â ÀÔ·Â
+		// ì—´ì˜ í¬ê¸° ì…ë ¥
 		for(int i = 0 ; i < ch.length ; i++) {
-			System.out.print(i+"¿­ÀÇ Å©±â ÀÔ·Â : ");
+			System.out.print(i+"ì—´ì˜ í¬ê¸° ì…ë ¥ : ");
 			ch[i] = new char[sc.nextInt()];
 		}
-		// 2Â÷¿ø ¹è¿­ ÃÊ±âÈ­, ÁÖ¼®µÈ ¹®ÀåÀ¸·Î °íÄ¥¼ö ÀÕÀ½
+		// 2ì°¨ì› ë°°ì—´ ì´ˆê¸°í™”, ì£¼ì„ëœ ë¬¸ì¥ìœ¼ë¡œ ê³ ì¹ ìˆ˜ ì‡ìŒ
 		int a = 97; //char a = 'a';
 		for(int i = 0 ; i < ch.length ; i++) {
 			for(int j = 0 ; j < ch[i].length ; j++) {
@@ -23,7 +23,7 @@ public class demensionArrayQuestion {
 				a++;
 			}
 		}
-		// 2Â÷¿ø ¹è¿­ Ãâ·Â
+		// 2ì°¨ì› ë°°ì—´ ì¶œë ¥
 		for(int i = 0 ; i < ch.length ; i++) {
 			for(int j = 0 ; j < ch[i].length ; j++) {
 				System.out.print(ch[i][j]+" ");

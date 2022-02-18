@@ -10,14 +10,14 @@ public class overAvg {
         int Testcase = 0;       // 테스트 케이스 수
         int n = 0;              // 학생 총수
         int nScoreArr[];
-        double sum = 0;            // 점수의 합
-        double avg = 0;         // 평균값
-        int avgCnt = 0;         // 평균이 넘는 학생 수
 
         Testcase = in.nextInt();
 
         //테스트 케이스 수만큼 반복
         for(int i = 0; i < Testcase; i++){
+            double sum = 0;             // 점수의 합
+            double avgCnt = 0;          // 평균이 넘는 학생 수
+            double avg = 0;             // 평균값
 
             n = in.nextInt();
             nScoreArr = new int[n];
@@ -26,7 +26,7 @@ public class overAvg {
                 sum += nScoreArr[j];
             }
             avg = sum/n;    // 학생들의 점수 평균
-            System.out.println(avg);
+
             for(int k = 0; k < n; k++){
                 if(avg < nScoreArr[k]){
                     avgCnt += 1;

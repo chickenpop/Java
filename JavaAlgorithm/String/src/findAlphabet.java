@@ -6,9 +6,9 @@ public class findAlphabet {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        int Alphabet[] = new int[24];               // 알파벳 위치를 저장할 배열
+        int Alphabet[] = new int[26];               // 알파벳 위치를 저장할 배열
         String alphabetString = in.next();          // 알파벳 입력
-        boolean AlphabetOverlap[] = new boolean[24];
+        boolean AlphabetOverlap[] = new boolean[26];
 
         for(int i = 0; i < Alphabet.length; i++){   // -1로 초기화
             Alphabet[i] = -1;

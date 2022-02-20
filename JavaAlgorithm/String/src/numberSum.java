@@ -15,10 +15,6 @@ public class numberSum {
             sum += (int)number.charAt(i) - '0';
         }
         
-<<<<<<< HEAD
-        // 출력
-=======
->>>>>>> bde1e005318f8eb7049fb6ba4897c938d62caeab
         System.out.println(sum);
         in.close();
     }    

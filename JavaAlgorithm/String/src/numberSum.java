@@ -1,4 +1,5 @@
 // 11720 숫자의 합
+
 import java.util.Scanner;
 
 public class numberSum {
@@ -14,7 +15,7 @@ public class numberSum {
         for(int i = 0; i < n; i++){
             sum += (int)number.charAt(i) - '0';
         }
-        
+
         System.out.println(sum);
         in.close();
     }    

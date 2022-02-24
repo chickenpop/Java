@@ -5,11 +5,16 @@ import java.util.Scanner;
 public class IO09 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        String time[];
+        
+        String yymmdd[];
 
-        time = in.next().split("\\.");
+        yymmdd = in.next().split("\\.");
 
-        System.out.printf("%s.%2s.%2s", time[0], time[1], time[2]);
+        int yy = Integer.valueOf(yymmdd[0]);
+        int mm = Integer.valueOf(yymmdd[1]);
+        int dd = Integer.valueOf(yymmdd[2]);
+
+        System.out.printf("%04d.%02d.%02d", yy, mm, dd);
 
         in.close();
     }

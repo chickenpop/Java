@@ -34,7 +34,7 @@
 
 #### (BOJ) [while](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/while)
 
-#### (BOJ) [1차원 배열](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Array/src
+#### (BOJ) [1차원 배열](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Array/src)
 
 #### (BOJ) [함수](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Function/src)
 

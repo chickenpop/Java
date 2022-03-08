@@ -6,7 +6,7 @@
 
 # Basic
 
-#### 기초 문법을 배운 후 직접 문제 풀이한 것을 정리한 곳
+#### 자바 기초 문법 과제 풀이
 
 #### 코드업 기초 예제 
 
@@ -26,4 +26,16 @@
 
 # 카테고리 찾아가기
 
-### (백준) [입출력과 사칙연산](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Print)
+#### (BOJ) [입출력과 사칙연산](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Print)
+
+#### (BOJ) [IF](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/If)
+
+#### (BOJ) [For](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/For)
+
+#### (BOJ) [while](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/while)
+
+#### (BOJ) [1차원 배열](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Array/src
+
+#### (BOJ) [함수](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Function/src)
+
+#### (BOJ) [문자열](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/String/src)

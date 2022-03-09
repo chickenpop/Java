@@ -78,5 +78,6 @@ public class Ex02_Casting {
 
         inum = ch + 3;
         System.out.printf("int형으로 변환값에 + 3 : %d\n", inum);
+ 
     }
 }

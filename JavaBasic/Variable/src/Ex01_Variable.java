@@ -350,6 +350,5 @@ public class Ex01_Variable {
 		String google = "https://www.google.com/";
 		System.out.println("구글 주소  : "+google);
 		
-		
 	}
 }

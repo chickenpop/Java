@@ -20,7 +20,7 @@ public class method_Q06 {
 		// 국어, 영어, 수학 순으로 입력
 		// 입력 표시에 맞는 int변수 <- bf 입력 받고 바로 형변환
 		// test(kor, eng, math) 결과 result에 저장
-		// result 결과, 'result'입니다. 형태로 출력
+		// result 결과, 'result'입니다. 형태로 출력 
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int kor = 0, eng = 0, math = 0;

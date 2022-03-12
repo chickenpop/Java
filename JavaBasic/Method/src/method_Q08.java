@@ -19,7 +19,7 @@ public class method_Q08 {
 		// 처음 열린 이후 : 10cm마다
 		
 		// 입력 객체 bf, improt 선언, 예외처리 throws Exception
-		// 특정 시간을 받을 int 변수 (suuny, foggy)
+		// 특정 시간을 받을 int 변수 (suuny, foggy) 
 		// getApple의 총 사과 갯수를 반환받을 int (appleCnt)
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int sunny = 0, foggy = 0;

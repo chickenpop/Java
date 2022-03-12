@@ -17,7 +17,7 @@ public class method_Q05 {
 		// 숫자를 입력 받기 위한 int 변수 선언 - num 
 		// getNumber 메소드 결과를 저장하기 위한 String 변수 선언 - result
 		// 입력받아야할 곳 표시, '숫자:' num <- bf로 숫자 입력받고 바로 형변환
-		// getNumber(num)의 결과를 result 반환받음
+		// getNumber(num)의 결과를 result 반환받음 
 		// result 결과 출력, 입력하신 숫자 'num'는(은) 'result'입니다.
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

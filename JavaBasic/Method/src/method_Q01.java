@@ -34,4 +34,5 @@ public class method_Q01 {
 		System.out.println("안녕히가세요.");
 		
 	}
+	
 }

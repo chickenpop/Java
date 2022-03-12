@@ -1,4 +1,4 @@
-public class Q03 {
+public class method_Q03 {
 
 	public static void main(String[] args) {
 		

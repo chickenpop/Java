@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Q08 {
+public class method_Q08 {
 
 	public static void main(String[] args) throws Exception {
 		

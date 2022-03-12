@@ -28,7 +28,7 @@ public class method_Q04 {
 		// 입력을 받아야하는 곳 표시, n번째 숫자 : 
 		// int변수 n1, n2 각각 입력 숫자 저장, String을 int로 바로 반환
 		// result는 메소드에 n1, n2를 넣은 결과값을 저장
-		// result 출력
+		// result 출력 
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int n1 = 0, n2 = 0;

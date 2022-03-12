@@ -8,7 +8,6 @@ public class Q04 {
 		// com.test.java.question.method > "Q04.java"
 		
 		// 4번 문제 연산식
-		// TODO 메소드 나누기 (2022. 3. 11. 오후 11:02:57)
 		
 		// 메소드 선언
 		// 메소드 공통 : n1 연산자 n2 = 결과 형태로 반환

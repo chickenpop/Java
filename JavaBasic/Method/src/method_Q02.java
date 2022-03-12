@@ -6,6 +6,7 @@ public class method_Q02 {
 		
 		// 2번 문제 고객명
 		
+		
 		// 메소드 선언 
 		// 메소드 이름 getName 매개변수 String name, 반환형 String
 		// 메소드 기능 (name + "님") 붙여서 반환

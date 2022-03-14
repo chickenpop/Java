@@ -50,12 +50,13 @@ public class method_Q08 {
 	// 흐린 날 성장률 : foggy * 2(cm)
 	// 사과가 처음 열리는 시점 : 100cm + 10cm
 	// 처음 열린 이후 : 10cm마다
+
+	// 190cm 이하의 사과나무 경우 모두 -1을 출력
 	public static int getApple(int sunny, int foggy) {
 		
 		int appleLength = sunny * 5 + foggy * 2;
-		int appleCnt = appleLength;
-		appleCnt -= 100;
-		appleCnt /= 10;
+		int appleCnt = appleLength - 100;
+		appleCnt = appleCnt < 0 ? -1 : appleCnt / 10;
 		
 		return appleCnt;
 	}

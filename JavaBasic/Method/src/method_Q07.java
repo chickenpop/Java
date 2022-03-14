@@ -37,7 +37,7 @@ public class method_Q07 {
 		change = Integer.parseInt(reader.readLine());
 		
 		System.out.print("시간대(1. 평상시, 2. 출근시, 3.퇴근시) : ");
-		time = Integer.parseInt(reader.readLine()) == 1 ? 3 : time == 2 ? 4 : 5;
+		time = Integer.parseInt(reader.readLine());
 		
 		// totalTime에 getTime(station, change, time) 반환 저장
 		// 출력 표시, 총 소요 시간은 'totalTime'분입니다.
@@ -55,9 +55,10 @@ public class method_Q07 {
 	// 시간대 : 평상시 3분, 출근시 4분, 퇴근시 5분
 	// 총 소요 시간 = 역 갯수 * 2 + 환승역 횟수 * 시간대 
 	
+	// 메소드 재사용성을 높이기 위해 연관있는 코드는 모아둔다
 	public static int getTime(int station, int change, int time) {
-		
-		return ( station * 2 ) + ( change * time );
+		int timeSelect = time  == 1 ? 3 : time == 2 ? 4 : 5;
+		return ( station * 2 ) + ( change * timeSelect);
 		
 	}
 	

@@ -19,6 +19,7 @@ public class String_Q03 {
 		
 		int i = 0;
 		// 데이터 추출
+		System.out.print("결과 : ");
 		while(i<word.length()) {
 			
 			if(i==word.length()-1) sign = '=';

@@ -1,8 +1,6 @@
-package com.test.java.question.gettersetter;
-
 import java.util.Calendar;
 
-public class Q06 {
+public class GetterSetter_Q06 {
 
 	public static void main(String[] args) {
 

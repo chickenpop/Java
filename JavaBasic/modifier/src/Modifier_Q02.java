@@ -75,16 +75,38 @@ class Barista {
 	Barista (){
 		Coffee coffee = new Coffee();
 	}
+
+	private void coffeePrice(int bean, int cups){
+		Coffee.setBean(bean);
+		Coffee.setEspresso(cups);
+		Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
+	}
 	
+	private void coffeePrice(int bean, int milk, int cups){
+		Coffee.setBean(bean);
+		Coffee.setMilk(milk);
+		Coffee.setLatte(cups);
+		Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
+		Coffee.setMilkTotalPrice(milk*Coffee.getMilkUnitPrice());
+	}
+
+	private void coffeePrice(int bean, int water, int ice, int cups){
+		Coffee.setBean(bean);
+		Coffee.setWater(water);
+		Coffee.setIce(ice);
+		Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
+		Coffee.setWaterTotalPrice((int)(water*Coffee.getWaterUnitPrice()));
+		Coffee.setIceTotalPrice(ice*Coffee.getIceUnitPrice());
+		Coffee.setAmericano(cups);
+	}
+
 	public Espresso makeEspresso(int bean) {
 		
 		espresso = new Espresso();
 		espresso.setBean(bean);
 		
 		// 커피 콩 원두량 추가, 에스프레소 잔 추가
-		Coffee.setBean(bean);
-		Coffee.setEspresso(1);
-		Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());;
+		coffeePrice(bean, 1);
 		return espresso;
 	}
 	
@@ -95,11 +117,7 @@ class Barista {
 		latte.setBean(bean);
 		latte.setMilk(milk);
 		
-		Coffee.setBean(bean);
-		Coffee.setMilk(milk);
-		Coffee.setLatte(1);
-		Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
-		Coffee.setMilkTotalPrice(milk*Coffee.getMilkUnitPrice());
+		coffeePrice(bean, milk, 1);
 		
 		return latte;
 	}
@@ -112,14 +130,7 @@ class Barista {
 		americano.setWater(water);;
 		americano.setIce(ice);
 		
-		Coffee.setBean(bean);
-		Coffee.setWater(water);
-		Coffee.setIce(ice);
-		Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
-		Coffee.setWaterTotalPrice((int)(water*Coffee.getWaterUnitPrice()));
-		Coffee.setIceTotalPrice(ice*Coffee.getIceUnitPrice());
-		
-		Coffee.setAmericano(1);
+		coffeePrice(bean, water, ice, 1);
 		
 		return americano;
 	}
@@ -131,12 +142,9 @@ class Barista {
 		
 		for(int i=0; i<espressoes.length; i++) {
 			espressoes[i] = new Espresso();
-			Coffee.setBean(bean);
 			espressoes[i].setBean(bean);
-			Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
+			coffeePrice(bean, 1);
 		}
-		
-		Coffee.setEspresso(cups);
 		
 		return espressoes;
 	}
@@ -149,15 +157,10 @@ class Barista {
 			lattes[i].setBean(bean);
 			lattes[i].setMilk(milk);;
 			
-			Coffee.setBean(bean);
-			Coffee.setMilk(milk);
-			
-			Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
-			Coffee.setMilkTotalPrice(milk*Coffee.getMilkUnitPrice());
+			coffeePrice(bean, milk, 1);
 			
 		}
-		
-		Coffee.setLatte(cups);
+	
 		
 		return lattes;
 	}
@@ -172,16 +175,8 @@ class Barista {
 			americanos[i].setWater(water);
 			americanos[i].setIce(ice);
 
-			Coffee.setBean(bean);
-			Coffee.setWater(water);
-			Coffee.setIce(ice);
-			
-			Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
-			Coffee.setWaterTotalPrice((int)(water*Coffee.getWaterUnitPrice()));
-			Coffee.setIceTotalPrice(ice*Coffee.getIceUnitPrice());
+			coffeePrice(bean, water, ice, 1);
 		}
-		
-		Coffee.setAmericano(cups);
 		
 		return americanos;
 	}

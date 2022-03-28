@@ -8,6 +8,7 @@ public class Modifier_Q02 {
 			static 변수를 이용하는 문제
 			Barista라는 클래스 안에 다양한 커피 종류의 클래스를 관리
 			Coffee라는 공용 클래스를 만들어 Barista 클래스가 효율적으로 공통된 요소를 저장하게 해줌
+			코드 추가/변경)Coffee 클래스 static {} 을 활용해 초기화해주는 코드
 			Espresso, Latte, Americano 클래스는 각자 고유의 요소를 갖고 그에 따른 결과를 출력
 			커피 종류 클래스를 활용해 참조 배열을 만들어 한번에 많은 데이터를 처리함
 
@@ -71,33 +72,42 @@ class Barista {
 	private Espresso[] espressoes;
 	private Latte[] lattes;
 	private Americano[] americanos;
+
+	private void coffeePrice(int bean){
+		coffeePrice(bean, 0, 0, 0, "Espresso");
+	}
 	
-	Barista (){
-		Coffee coffee = new Coffee();
+	private void coffeePrice(int bean, int milk){
+		coffeePrice(bean, milk, 0, 0, "Latte");
 	}
 
-	private void coffeePrice(int bean, int cups){
-		Coffee.setBean(bean);
-		Coffee.setEspresso(cups);
-		Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
+	private void coffeePrice(int bean, int water, int ice){
+		coffeePrice(bean, 0, water, ice, "Americano");
 	}
-	
-	private void coffeePrice(int bean, int milk, int cups){
+
+	private void coffeePrice(int bean, int milk, int water, int ice, String menu){
+		// 재료량
 		Coffee.setBean(bean);
 		Coffee.setMilk(milk);
-		Coffee.setLatte(cups);
-		Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
-		Coffee.setMilkTotalPrice(milk*Coffee.getMilkUnitPrice());
-	}
-
-	private void coffeePrice(int bean, int water, int ice, int cups){
-		Coffee.setBean(bean);
 		Coffee.setWater(water);
 		Coffee.setIce(ice);
+
+		// 커피 메뉴에 따른 재료 매출
 		Coffee.setBeanTotalPrice(bean*Coffee.getBeanUnitPrice());
+		Coffee.setMilkTotalPrice(milk*Coffee.getMilkUnitPrice());
 		Coffee.setWaterTotalPrice((int)(water*Coffee.getWaterUnitPrice()));
 		Coffee.setIceTotalPrice(ice*Coffee.getIceUnitPrice());
-		Coffee.setAmericano(cups);
+		
+		// 커피 메뉴 1잔추가 고정
+		if(menu.equals("Espresso")){
+			Coffee.setEspresso(1);
+		} else if(menu.equals("Latte")){
+			Coffee.setLatte(1);
+		} else if(menu.equals("Americano")){
+			Coffee.setAmericano(1);
+		} else {
+			return;
+		}
 	}
 
 	public Espresso makeEspresso(int bean) {
@@ -106,7 +116,7 @@ class Barista {
 		espresso.setBean(bean);
 		
 		// 커피 콩 원두량 추가, 에스프레소 잔 추가
-		coffeePrice(bean, 1);
+		coffeePrice(bean);
 		return espresso;
 	}
 	
@@ -117,8 +127,8 @@ class Barista {
 		latte.setBean(bean);
 		latte.setMilk(milk);
 		
-		coffeePrice(bean, milk, 1);
-		
+		coffeePrice(bean, milk);
+
 		return latte;
 	}
 	
@@ -130,7 +140,7 @@ class Barista {
 		americano.setWater(water);;
 		americano.setIce(ice);
 		
-		coffeePrice(bean, water, ice, 1);
+		coffeePrice(bean, water, ice);
 		
 		return americano;
 	}
@@ -143,7 +153,7 @@ class Barista {
 		for(int i=0; i<espressoes.length; i++) {
 			espressoes[i] = new Espresso();
 			espressoes[i].setBean(bean);
-			coffeePrice(bean, 1);
+			coffeePrice(bean);
 		}
 		
 		return espressoes;
@@ -157,7 +167,7 @@ class Barista {
 			lattes[i].setBean(bean);
 			lattes[i].setMilk(milk);;
 			
-			coffeePrice(bean, milk, 1);
+			coffeePrice(bean, milk);
 			
 		}
 	
@@ -175,7 +185,7 @@ class Barista {
 			americanos[i].setWater(water);
 			americanos[i].setIce(ice);
 
-			coffeePrice(bean, water, ice, 1);
+			coffeePrice(bean, water, ice);
 		}
 		
 		return americanos;
@@ -232,11 +242,11 @@ class Coffee {
 	private static int latte; 		// 라테 총 판매 개수(잔)
 	private static int espresso;	// 에스프레소 총 판매 개수(잔)
 	
-	Coffee(){
-		 beanUnitPrice = 1;
-		 waterUnitPrice = 0.2;	
-		 iceUnitPrice = 3;	
-		 milkUnitPrice = 4;
+	static {
+		beanUnitPrice = 1;
+		waterUnitPrice = 0.2;
+		iceUnitPrice = 3;
+		milkUnitPrice = 4;
 	}
 	
 	public static int getBean() {

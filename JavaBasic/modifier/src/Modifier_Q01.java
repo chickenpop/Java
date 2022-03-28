@@ -9,7 +9,8 @@ public class Modifier_Q01 {
 			Packer라는 클래스 안에 Pencil, Eraser, BallPointPen, Ruler의 
 			정보를 저장, 공통적으로 관리
 			각 클래스에서는 고유 정보를 갖고 그에 따라 다른 결과를 출력
-
+			코드추가/변경)일부 클래스에서 대소문자 구분없이 문자열 비교를 위한 toUpperCase()
+			코드추가/변경)static 변수의 초기화하는 잘못된 코드가 있어 삭제 > 3/28 배운 수업 참고
 		*/
 
 		//포장하는 직원
@@ -64,15 +65,6 @@ class Packer {
 	private static int eraserCount;
 	private static int ballPointCount;
 	private static int rulerCount;
-	
-	Packer(){
-		
-		Packer.pencilCount = 0;
-		Packer.eraserCount = 0;
-		Packer.ballPointCount = 0;
-		Packer.rulerCount = 0;
-	
-	}
 	
 	public void packing(Pencil pencil) {
 		System.out.printf("포장 전 검수 : %s\n", pencil.info());
@@ -139,7 +131,7 @@ class Pencil {
 	
 	private boolean checkHardness(String hardness) {
 		for(int i=0; i<hardnessType.length;i++) {
-			if(hardnessType[i].equals(hardness)) {
+			if(hardnessType[i].toUpperCase().equals(hardness)) {
 				return true;
 			}
 		}
@@ -171,7 +163,7 @@ class Eraser {
 
 	private boolean checkSize(String size) {
 		for(int i=0; i<sizeType.length; i++) {
-			if(sizeType[i].equals(size)) {
+			if(sizeType[i].toUpperCase().equals(size.toUpperCase())) {
 				return true;
 			}
 		}
@@ -231,7 +223,3 @@ class Ruler {
 	}
 
 }
-
-
-
-

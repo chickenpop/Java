@@ -8,19 +8,41 @@ public class MyStack {
 	}
 	
 	public boolean push(String value) {
-		if(this.index == 0) {
-			list = new String[4];
-		} else if(this.index >= list.length) {
-    	  String[] copyList = this.list;
-    	  this.list = new String[list.length*2];
-    	  for(int i=0; i<copyList.length; i++) {
-    		  this.list[i] = copyList[i];
-    	  }
-    	}
+		
+		init();
+		
+		if(checkLength()) {
+			doubleStack();
+		}
 		
 		this.list[this.index] = value;
 		this.index++;
 		return true;
+	}
+	
+	private boolean checkLength() {
+		
+		if(this.index == this.list.length) {
+			return true;
+		}
+		
+		return false;
+	}
+
+	private void init() {
+		if(this.index == 0) {
+			list = new String[4];
+		}
+	}
+	
+	private void doubleStack() {
+		if(this.index == list.length) {
+			String[] temp = new String[this.list.length * 2];
+    	  	for(int i=0; i<this.list.length; i++) {
+    		  temp[i] = this.list[i];
+    	 	 }
+    	  	this.list = temp;
+    	}
 	}
 	
 	public String pop() {
@@ -47,16 +69,12 @@ public class MyStack {
 	}
 	
 	public void trimToSize(){
-		String[] copyList = this.list;
-		  int cnt = 0;
-		   for(String i : this.list) {
-			   if(i != null)
-				   cnt++;
-		   }
-		  this.list = new String[cnt];
-		  for(int i=0; i<this.list.length; i++) {
-			  this.list[i] = copyList[i];
-		  }
+		String[] temp = new String[this.list.length];
+		for(int i=0; i<this.list.length; i++) {
+			temp[i] = this.list[i];
+		}
+		this.list = temp;
+		
 	}
 	
 	public void clear() {

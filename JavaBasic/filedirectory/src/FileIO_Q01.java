@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 
 public class FileIO_Q01 {
 
@@ -16,12 +17,15 @@ public class FileIO_Q01 {
 			
 			BufferedReader reader = new BufferedReader(new FileReader(path));
 			
+			FileWriter writer = new FileWriter("C:\\class\\java\\questionFileIO\\이름수정_변환.dat");
+			
 			String line = null;
 			while((line = reader.readLine()) != null) {
-				System.out.println(line.replace("유재석", "메뚜기"));
+				writer.write(line.replace("유재석", "메뚜기"));
 			}
 			
 			reader.close();
+			writer.close();
 			
 			System.out.println("변환 후 다른 이름으로 저장하였습니다.");
 		} catch (Exception e) {

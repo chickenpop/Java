@@ -1,6 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
-
+import java.io.FileWriter;
 public class FileIO_Q02 {
 
 	public static void main(String[] args) {
@@ -11,16 +11,18 @@ public class FileIO_Q02 {
 		try {
 			String path = "C:\\class\\java\\questionFileIO\\숫자.dat";
 			BufferedReader reader = new BufferedReader(new FileReader(path));
+			FileWriter writer = new FileWriter("C:\\class\\java\\questionFileIO\\숫자_변환.dat");
 		
 			String line = null;
 			
 			while((line = reader.readLine()) != null) {
 				
 				line = numberToString(line);
-				System.out.println(line);
+				writer.write(line);
 			}
 			
 			reader.close();
+			writer.close();
 			System.out.println("변환 후 다른 이름으로 저장하였습니다.");
 		} catch (Exception e) {
 			System.out.println("Q02.main");

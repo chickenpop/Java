@@ -14,8 +14,8 @@ public class Ex02_CardTest {
         c2.number = 3;
 
         // 예시라서 c1, c1를 사용했지만 static은 클래스명.클래스변수 방식으로 사용할것
-        System.out.printf("c1의 종류는 %s, 숫자는 %d 카드 크기(%d, %d)\n", c1.kind, c1.number, c1.width, c1.height);
-        System.out.printf("c2의 종류는 %s, 숫자는 %d 카드 크기(%d, %d)\n", c2.kind, c2.number, c2.width, c2.height);
+        System.out.printf("c1의 종류는 %s, 숫자는 %d 카드 크기(%d, %d)\n", c1.kind, c1.number, Card.width, Card.height);
+        System.out.printf("c2의 종류는 %s, 숫자는 %d 카드 크기(%d, %d)\n", c2.kind, c2.number, Card.width, Card.height);
 
         Card.width = 50;
         Card.height = 100;
@@ -23,8 +23,8 @@ public class Ex02_CardTest {
 
         System.out.printf("Card.width = %d\n", Card.width);
         System.out.printf("Card.height = %d\n", Card.height);
-        System.out.printf("c1의 종류는 %s, 숫자는 %d 카드 크기(%d, %d)\n", c1.kind, c1.number, c1.width, c1.height);
-        System.out.printf("c2의 종류는 %s, 숫자는 %d 카드 크기(%d, %d)\n", c2.kind, c2.number, c2.width, c2.height);
+        System.out.printf("c1의 종류는 %s, 숫자는 %d 카드 크기(%d, %d)\n", c1.kind, c1.number, Card.width, Card.height);
+        System.out.printf("c2의 종류는 %s, 숫자는 %d 카드 크기(%d, %d)\n", c2.kind, c2.number, Card.width, Card.height);
     }
 }
 

@@ -1,53 +1,42 @@
 # Java
-
-# Algorithm
- 
-#### 자바에 관련된 알고리즘 정리한 곳
-
-# Basic
-
-#### 자바 기초 문법 과제/연습
-
-#### - 파일 커밋 : [chapter/관련 주제] [소주제] [과제/연습]
-
-#### - 과제 파일명 : [폴더명]_Q[순서] 예외 [변수, 연산자]
-
-#### 코드업 기초 예제 
-
-# JavaJungsuk
-
-#### 자바의 정석 책 예제
-
-#### - 파일명 : [순서]_[이름] 
-
----
-
-# 변경사항
-
-#### 폴더명을 대문자에서 소문자로 변경함 3/26
+> 자바 언어에 관한 개인 공부를 하는 장소입니다.
 
 
----
-# 커밋
+### 개발환경
 
-#### - 성공한 문제 : [사이트이름] [문제번호] [문제이름]
+<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code-007ACC&logoColor=white">
 
-#### - 틀린 문제   :  fail - [틀린 이유나 추정되는 생각]
 
-#### - 문서를 수정 :  docs
+### Algorithm 
+> 자바에 관련된 알고리즘 공부하는 장소입니다.
+- baekjonn
+- codeup
 
-# 카테고리 찾아가기
+### Basic
+> 자바 기초 문법과 과제/연습하는 장소입니다.
+    
+- 파일 커밋 : [chapter/관련 주제] [소주제] [과제/연습]
 
-#### (BOJ) [입출력과 사칙연산](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Print)
+- 과제 파일명 : [폴더명]_Q[순서] 예외 [변수, 연산자]
 
-#### (BOJ) [IF](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/If)
+- 코드업 기초 예제 
 
-#### (BOJ) [For](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/For)
 
-#### (BOJ) [while](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/while)
 
-#### (BOJ) [1차원 배열](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Array/src)
+### JavaJungsuk
+> 자바의 정석 책 예제를 직접해보는 장소입니다
 
-#### (BOJ) [함수](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/Function/src)
+- 파일명 : [순서]_[이름] 
 
-#### (BOJ) [문자열](https://github.com/chickenpop/Java/tree/main/JavaAlgorithm/String/src)
+
+### 커밋 규칙
+
+- 성공한 문제 : [사이트이름] [문제번호] [문제이름]
+
+- 틀린 문제   :  fail - [틀린 이유나 추정되는 생각]
+
+- 문서를 수정 :  docs or 수정 이유
+
+
+### 변경사항
+- 폴더명을 대문자에서 소문자로 변경함

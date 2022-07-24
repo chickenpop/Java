@@ -1,0 +1,78 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch MakeFile",
+            "request": "launch",
+            "mainClass": "MakeFile",
+            "projectName": "JavaBasic_661da7a7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ex02_StreamEx2",
+            "request": "launch",
+            "mainClass": "Ex02_StreamEx2",
+            "projectName": "JavaBasic_661da7a7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ex01_StreamEx1",
+            "request": "launch",
+            "mainClass": "Ex01_StreamEx1",
+            "projectName": "JavaBasic_661da7a7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lambda_T02",
+            "request": "launch",
+            "mainClass": "Lambda_T02",
+            "projectName": "JavaBasic_661da7a7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lambda_T01",
+            "request": "launch",
+            "mainClass": "Lambda_T01",
+            "projectName": "JavaBasic_661da7a7"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileIO_Q07",
+            "request": "launch",
+            "mainClass": "FileIO_Q07",
+            "projectName": "JavaBasic_661da7a7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ex03_StackEx1",
+            "request": "launch",
+            "mainClass": "Ex03_StackEx1",
+            "projectName": "JavaBasic_661da7a7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ex02_ArrayListLInkedListTest2",
+            "request": "launch",
+            "mainClass": "Ex02_ArrayListLInkedListTest2",
+            "projectName": "JavaBasic_661da7a7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ex01_ArrayListEx2",
+            "request": "launch",
+            "mainClass": "Ex01_ArrayListEx2",
+            "projectName": "JavaBasic_661da7a7"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "JavaBasic_661da7a7"
+        }
+    ]
+}
